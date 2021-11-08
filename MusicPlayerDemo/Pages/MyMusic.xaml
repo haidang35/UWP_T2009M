@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="MusicPlayerDemo.Pages.MyMusic"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayerDemo.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot Title="My Music">
+            <PivotItem Header="Songs">
+                <Grid>
+                    <StackPanel Margin="0, 20">
+                        <MenuBar>
+                        <MenuBarItem Title="File">
+                            <MenuFlyoutItem Text="New"/>
+                            <MenuFlyoutItem Text="Open..."/>
+                            <MenuFlyoutItem Text="Save"/>
+                            <MenuFlyoutItem Text="Exit"/>
+                        </MenuBarItem>
+                        <MenuBarItem Title="Sort by">
+                            <MenuFlyoutItem Text="Undo"/>
+                            <MenuFlyoutItem Text="Cut"/>
+                            <MenuFlyoutItem Text="Copy"/>
+                            <MenuFlyoutItem Text="Paste"/>
+                        </MenuBarItem>
+                        <MenuBarItem Title="Genre">
+                            <MenuFlyoutItem Text="About"/>
+                        </MenuBarItem>
+                    </MenuBar>
+                    </StackPanel>
+                    <ListView
+                        x:Name="songList"
+                        SelectionMode="Single"
+                        Height="700"
+                        >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="10, 80">
+                                    <StackPanel Margin="10, 0" Orientation="Horizontal">
+                                        <SymbolIcon Symbol="FourBars" />
+                                        <Ellipse x:Name="spinme" Height="100" Width="100" Margin="20, 0">
+                                            <Ellipse.Fill>
+                                                <ImageBrush ImageSource="{Binding thumbnail}" />
+                                            </Ellipse.Fill>
+                                        </Ellipse>
+                                        <ToggleButton Tag="{ Binding link }" Click="ChooseSongPlay"  Margin="5" Content="Play" Width="60" IsThreeState="True"/>
+                                    </StackPanel>
+                                    <RelativePanel VerticalAlignment="Center">
+                                        <StackPanel Orientation="Vertical" x:Name="songInfo" Margin="30, 0">
+                                            <TextBlock x:Name="songName" FontSize="18" Text="{ Binding name  }" />
+                                            <TextBlock x:Name="songAuthor" FontSize="15" Text="{ Binding author }" Margin="0, 18, 0, 0" />
+                                        </StackPanel>
+                                        <TextBlock x:Name="songDuration" FontSize="15" Text="{ Binding description }" VerticalAlignment="Center" RelativePanel.RightOf="songInfo" Margin="200, 0, 0, 0" />
+                                    </RelativePanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackPanel VerticalAlignment="Bottom">
+                        <MediaPlayerElement 
+                            x:FieldModifier="public"
+                            x:Name="mediaPlayerElement"
+                            Source="ms-appx:///Videos/video1.mp4"
+                            AutoPlay="False"
+                            AccessKey="mediaPlayer"
+                            Width="1550"
+                            HorizontalAlignment="Left"
+                            AreTransportControlsEnabled="True"/>
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Artists">
+                <TextBlock Text="unread emails go here." />
+            </PivotItem>
+            <PivotItem Header="Albums">
+                <TextBlock Text="flagged emails go here." />
+            </PivotItem>
+        </Pivot>
+        
+    </Grid>
+</Page>

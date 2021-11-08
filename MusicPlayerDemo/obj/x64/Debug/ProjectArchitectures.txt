@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\CloudinaryHandler\CloudinaryHandler.csproj;x64
+C:\Users\nguye\source\repos\MusicPlayerDemo\MusicPlayerDemo.csproj;x64

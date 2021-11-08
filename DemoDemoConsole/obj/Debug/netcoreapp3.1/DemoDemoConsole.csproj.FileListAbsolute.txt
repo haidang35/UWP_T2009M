@@ -1,0 +1,14 @@
+C:\Users\nguye\source\repos\DemoDemoConsole\bin\Debug\netcoreapp3.1\DemoDemoConsole.exe
+C:\Users\nguye\source\repos\DemoDemoConsole\bin\Debug\netcoreapp3.1\DemoDemoConsole.deps.json
+C:\Users\nguye\source\repos\DemoDemoConsole\bin\Debug\netcoreapp3.1\DemoDemoConsole.runtimeconfig.json
+C:\Users\nguye\source\repos\DemoDemoConsole\bin\Debug\netcoreapp3.1\DemoDemoConsole.runtimeconfig.dev.json
+C:\Users\nguye\source\repos\DemoDemoConsole\bin\Debug\netcoreapp3.1\DemoDemoConsole.dll
+C:\Users\nguye\source\repos\DemoDemoConsole\bin\Debug\netcoreapp3.1\DemoDemoConsole.pdb
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.csproj.AssemblyReference.cache
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.AssemblyInfoInputs.cache
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.AssemblyInfo.cs
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.csproj.CoreCompileInputs.cache
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.dll
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.pdb
+C:\Users\nguye\source\repos\DemoDemoConsole\obj\Debug\netcoreapp3.1\DemoDemoConsole.genruntimeconfig.cache

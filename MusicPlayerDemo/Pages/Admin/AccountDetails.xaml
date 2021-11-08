@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="MusicPlayerDemo.Pages.Admin.AccountDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayerDemo.Pages.Admin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock Margin="100, 50" Text="Account Profile" FontSize="30" />
+        <StackPanel x:Name="LoadingEffect" VerticalAlignment="Center" Orientation="Vertical">
+            <ProgressBar Width="1000" IsIndeterminate="True" ShowPaused="False" ShowError="False" />
+        </StackPanel>
+        <StackPanel x:Name="ProfileContent" Orientation="Horizontal">
+            <StackPanel  Margin="100">
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="ID: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="idTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Role: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="roleTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="First Name: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock  x:Name="firstNameTxt" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Last Name: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="lastNameTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Birthday: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="birthdayTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Gender: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="genderTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Email: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="emailTxt"  Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Phone: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="phoneTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Address: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="addressTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" >
+                    <TextBlock Text="Status: " Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="statusTxt" Text="ABCD" FontSize="20"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="300, 80, 0, 0">
+                <StackPanel Style="{StaticResource FormGroup}">
+                    <TextBlock Text="Avatar: " Style="{StaticResource FormLabel}"/>
+                    <Image x:Name="avatarImage" Width="400" Margin="0, 50" Source="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" />
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormGroup}" Orientation="Vertical">
+                    <TextBlock Text="Introduce: " HorizontalAlignment="Left" Style="{StaticResource FormLabel}"/>
+                    <TextBlock x:Name="introduceTxt" Text="ABCD" FontSize="20" Margin="0, 20"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

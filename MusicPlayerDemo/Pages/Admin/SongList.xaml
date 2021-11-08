@@ -1,0 +1,128 @@
+﻿<Page
+    x:Class="MusicPlayerDemo.Pages.Admin.SongList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayerDemo.Pages.Admin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel 
+                x:Name="controlBar"
+                Margin="20, 50" 
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Orientation="Horizontal">
+            <SearchBox x:Name="mySearchBox" 
+                FocusOnKeyboardInput="False"
+                QuerySubmitted="mySearchBox_QuerySubmitted"
+                Width="500"
+                FontSize="18"
+                Height="45"/>
+        </StackPanel>
+        <controls:DataGrid
+            x:Name="SongListDataGrid"
+            HeadersVisibility="Column"
+            AutoGenerateColumns="False"
+            Height="Auto"
+            Margin="20, 150, 20, 0"
+            VerticalScrollBarVisibility="Visible"
+            HorizontalScrollBarVisibility="Visible"
+            CellEditEnded="DataGrid_CellEditEnded"
+            Sorting="SongListSorting"
+        >
+            <controls:DataGrid.Columns>
+                <controls:DataGridTemplateColumn 
+                    Header="Action"
+                    Width="SizeToHeader"
+                     >
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="CheckedUser" Margin="30" Tag="{ Binding id }" />
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+                <controls:DataGridTextColumn 
+                    Header="Name" 
+                    Width="SizeToCells"
+                    Binding="{Binding name}" 
+                    FontSize="20" 
+                    Tag="name"
+                    SortDirection="Ascending"
+                   />
+                <controls:DataGridTextColumn 
+                    Header="Author" 
+                    Width="SizeToCells"
+                    Binding="{Binding author}" 
+                    FontSize="20" 
+                    Tag="author"
+                    SortDirection="Ascending"/>
+                <controls:DataGridTextColumn 
+                    Header="Singer" 
+                    Width="SizeToCells"
+                    Binding="{Binding singer}" 
+                    FontSize="20" 
+                    Tag="singer"
+                    SortDirection="Ascending"/>
+                <controls:DataGridTextColumn 
+                    Header="Thumbnail" 
+                    Width="SizeToHeader"
+                    Binding="{Binding thumbnail}" 
+                    FontSize="20" 
+                    Tag="thumbnail"
+                    />
+                <controls:DataGridTextColumn 
+                    Header="Link" 
+                    Width="SizeToHeader"
+                    Binding="{Binding link}" 
+                    FontSize="20" 
+                    Tag="link"
+                    />
+                <controls:DataGridTextColumn 
+                    Header="Message" 
+                    Width="SizeToCells"
+                    Binding="{Binding message}" 
+                    FontSize="20" 
+                    Tag="message"
+                    />
+                <controls:DataGridTextColumn 
+                    Header="Description" 
+                    Width="SizeToCells"
+                    Binding="{Binding description}" 
+                    FontSize="20" 
+                    Tag="description"
+                    />
+                <controls:DataGridTextColumn 
+                    Header="User" 
+                    Width="SizeToHeader"
+                    Binding="{Binding userId}" 
+                    FontSize="20" 
+                    Tag="userId"
+                    />
+                <controls:DataGridTemplateColumn 
+                    Header="Action"
+                    Width="SizeToCells"
+                     >
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Button Margin="20, 0, 40, 0" >
+                                    <SymbolIcon  Symbol="View" />
+                                </Button>
+                                <Button Click="DeleteSong" Tag="{Binding id}">
+                                    <SymbolIcon Symbol="Delete" />
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+        <StackPanel x:Name="LoadingEffect" VerticalAlignment="Center" Visibility="Collapsed">
+            <ProgressRing x:Name="LoadingPage" IsActive="True" Width="100" Height="100"  />
+            <TextBlock Text="Waiting ..." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 100, 0, 0" />
+        </StackPanel>
+    </Grid>
+</Page>

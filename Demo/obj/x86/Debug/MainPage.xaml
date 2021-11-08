@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Demo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button x:ConnectionId='2' x:Name="ClickMe" Content="Click me" Margin="522,251,0,0" VerticalAlignment="Top" Height="129" Width="407" FontSize="20"                     />
+        <TextBox x:ConnectionId='3' x:Name="Text" HorizontalAlignment="Left" Margin="490,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="149" Width="472" FontSize="72"                                  />
+
+    </Grid>
+</Page>
+

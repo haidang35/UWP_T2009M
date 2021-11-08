@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="MusicPlayerDemo.Pages.RegisterAccount"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayerDemo.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="164,127,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="233"/>
+        <TextBox x:ConnectionId='2' x:Name="firstNameTxt" HorizontalAlignment="Left" FontSize="20" Margin="164,158,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="785,127,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="235"/>
+        <TextBox x:ConnectionId='3' x:Name="lastNameTxt" HorizontalAlignment="Left" FontSize="20" Margin="784,158,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="164,264,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="233"/>
+        <TextBox x:ConnectionId='4' x:Name="emailTxt" HorizontalAlignment="Left" FontSize="20" Margin="164,296,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="785,264,0,0" Text="Phone Number" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="235"/>
+        <TextBox x:ConnectionId='5' x:Name="phoneTxt" HorizontalAlignment="Left" Margin="784,296,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="160,405,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="233"/>
+        <TextBox x:ConnectionId='6' x:Name="passwordTxt" HorizontalAlignment="Left" FontSize="20" Margin="160,437,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="783,405,0,0" Text="Avatar" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="233"/>
+        <TextBox x:ConnectionId='7' x:Name="avatarTxt" HorizontalAlignment="Left" FontSize="20" Margin="782,437,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="160,543,0,0" Text="Address" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="233"/>
+        <TextBox x:ConnectionId='8' x:Name="addressTxt" HorizontalAlignment="Left" FontSize="20" Margin="160,574,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="1146" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:ConnectionId='9' Content="Register"                      Margin="1016,809,0,0" FontSize="25" VerticalAlignment="Top" Width="282" Height="68"/>
+        <RadioButton x:ConnectionId='10'                               FontSize="20"  Tag="Male" Content="Male" Margin="169,707,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:ConnectionId='11'                               FontSize="20"  Tag="Female" Content="Female" Margin="344,707,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:ConnectionId='12'                               FontSize="20"  Tag="Other" Content="Other" Margin="540,707,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:ConnectionId='13' x:Name="birthdayTxt" Margin="660,726,0,0" VerticalAlignment="Top" Height="59" Width="712"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="785,675,0,0" Text="Birthday" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="233"/>
+    </Grid>
+
+</Page>
+

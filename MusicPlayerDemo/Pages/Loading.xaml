@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="MusicPlayerDemo.Pages.Loading"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayerDemo.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Height="200">
+        <ProgressRing x:Name="LoadingPage" IsActive="True" Width="100" Height="100"  />
+        <TextBlock Text="Waiting ..." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 100, 0, 0" />
+    </Grid>
+</Page>

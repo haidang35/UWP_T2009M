@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="MusicPlayerDemo.Pages.CreateNewSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayerDemo.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel x:Name="LoadingEffect" VerticalAlignment="Top" Visibility="Collapsed" HorizontalAlignment="Left" Orientation="Vertical" Margin="164,75,0,0">
+            <ProgressBar Width="1100" IsIndeterminate="True" ShowPaused="False" ShowError="False" Height="25"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="164,127,0,0" Text="Song Name" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="233"/>
+        <TextBox x:Name="songNameTxt" HorizontalAlignment="Left" FontSize="20" Margin="164,158,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="785,127,0,0" Text="Singer" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="235"/>
+        <TextBox x:Name="singerTxt" HorizontalAlignment="Left" FontSize="20" Margin="784,158,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="164,264,0,0" Text="Author" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="233"/>
+        <TextBox x:Name="authorTxt" HorizontalAlignment="Left" FontSize="20" Margin="164,296,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="785,264,0,0" Text="Thumbnail" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="235"/>
+        <TextBox x:Name="thumbnailTxt" HorizontalAlignment="Left" Margin="784,296,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="160,405,0,0" Text="Link" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="233"/>
+        <TextBox x:Name="linkTxt" HorizontalAlignment="Left" FontSize="20" Margin="160,437,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="783,405,0,0" Text="Message" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="233"/>
+        <TextBox x:Name="messageTxt" HorizontalAlignment="Left" FontSize="20" Margin="782,437,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="518" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" FontSize="20"  Margin="160,543,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="233"/>
+        <TextBox x:Name="descriptionTxt" HorizontalAlignment="Left" FontSize="20" Margin="160,574,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="1146" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBox.RenderTransform>
+                <CompositeTransform Rotation="-0.142" SkewY="-0.017" SkewX="0"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Content="Save" Click="SaveNewSong" Margin="1023,758,0,0" FontSize="25" VerticalAlignment="Top" Width="282" Height="68"/>
+        <RadioButton FontSize="20" Checked="SongStatusChecked" Tag="Active" Content="Active" Margin="169,707,0,0" VerticalAlignment="Top"/>
+        <RadioButton FontSize="20" Checked="SongStatusChecked" Tag="Deactive" Content="Deactive" Margin="344,707,0,0" VerticalAlignment="Top"/>
+        <Button Click="UploadImage" Content="Upload Image" FontSize="25" Margin="169,764,0,0" VerticalAlignment="Top" Height="66" Width="239"/>
+        <Button Click="UploadFile" Content="Upload File" FontSize="25" Margin="442,764,0,0" VerticalAlignment="Top" Height="66" Width="239"/>
+    </Grid>
+</Page>
