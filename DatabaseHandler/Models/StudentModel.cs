@@ -112,9 +112,6 @@ namespace DatabaseHandler.Models
             {
                  conn.Close();
             }
-
-          
-
         }
 
         public static bool Update(string studentId, Student student)

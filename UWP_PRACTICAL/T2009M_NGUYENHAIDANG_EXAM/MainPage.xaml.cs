@@ -53,10 +53,20 @@ namespace T2009M_NGUYENHAIDANG_EXAM
             }
         }
 
-        public void SearchContactByName(object sender, RoutedEventArgs e)
+        public async void SearchContactByName(object sender, RoutedEventArgs e)
         {
             var contact = contactModel.FindByName(nameSearchTxt.Text);
-            phoneSearchTxt.Text = contact.Phone;
+            if (contact != null)
+            {
+                phoneSearchTxt.Text = contact.Phone;
+            }else
+            {
+                ContentDialog dialog = new ContentDialog();
+                dialog.Title = "Notification";
+                dialog.Content = "Contact not found";
+                dialog.CloseButtonText = "Close";
+                await dialog.ShowAsync();
+            }
         }
     }
 }
