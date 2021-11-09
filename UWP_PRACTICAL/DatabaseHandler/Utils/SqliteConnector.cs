@@ -23,7 +23,7 @@ namespace DatabaseHandler.Utils
 
                 String tableCommand = "CREATE TABLE IF NOT " +
                     "EXISTS contacts (Primary_Key INTEGER PRIMARY KEY, " +
-                    "name NVARCHAR(255) NULL, phone NVARCHAR(255))";
+                    "name NVARCHAR(255) NULL, phone NVARCHAR(255) UNIQUE)";
 
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
 

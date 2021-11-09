@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-09T05:56:41.427</Modified>
+      <Modified>2021-11-09T07:09:38.735</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\bin\x86\Debug\T2009M_NGUYENHAIDANG_EXAM.exe">
       <PackagePath>entrypoint\T2009M_NGUYENHAIDANG_EXAM.exe</PackagePath>
-      <Modified>2021-11-09T05:56:40.933</Modified>
+      <Modified>2021-11-09T07:09:37.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nguye\.nuget\packages\microsoft.data.sqlite.core\3.0.3\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -72,7 +72,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\DatabaseHandler\bin\x86\Debug\DatabaseHandler.dll">
       <PackagePath>DatabaseHandler.dll</PackagePath>
-      <Modified>2021-11-09T05:56:36.872</Modified>
+      <Modified>2021-11-09T07:09:30.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -122,11 +122,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-09T05:56:40.861</Modified>
+      <Modified>2021-11-09T07:09:37.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-09T05:56:40.862</Modified>
+      <Modified>2021-11-09T07:09:37.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -134,11 +134,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-09T05:56:41.035</Modified>
+      <Modified>2021-11-09T07:09:37.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\bin\x86\Debug\Core\T2009M_NGUYENHAIDANG_EXAM.exe">
       <PackagePath>T2009M_NGUYENHAIDANG_EXAM.exe</PackagePath>
-      <Modified>2021-11-09T05:56:41.423</Modified>
+      <Modified>2021-11-09T07:09:38.729</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
