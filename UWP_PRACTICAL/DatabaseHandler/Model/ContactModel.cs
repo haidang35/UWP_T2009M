@@ -67,5 +67,33 @@ namespace DatabaseHandler.Model
             return contactList[0];
         }
 
+        public List<Contact> FindAll()
+        {
+            List<Contact> contactList = new List<Contact>();
+            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, DatabaseName);
+            using (SqliteConnection db =
+               new SqliteConnection($"Filename={dbpath}"))
+            {
+                db.Open();
+
+                SqliteCommand selectCommand = new SqliteCommand
+                    ($"SELECT * from contacts", db);
+
+                SqliteDataReader query = selectCommand.ExecuteReader();
+
+                while (query.Read())
+                {
+                    var contact = new Contact()
+                    {
+                        Name = query.GetString("name"),
+                        Phone = query.GetString("phone"),
+                    };
+                    contactList.Add(contact);
+                }
+                db.Close();
+            }
+            return contactList;
+        }
+
     }
 }

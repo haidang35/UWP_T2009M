@@ -28,6 +28,17 @@ namespace T2009M_NGUYENHAIDANG_EXAM
         public MainPage()
         {
             this.InitializeComponent();
+            this.Loaded += AfterLoadingComponent;
+        }
+
+        public void AfterLoadingComponent(object sender, RoutedEventArgs e)
+        {
+            LoadingContactList();
+        }
+        
+        public void LoadingContactList()
+        {
+            contactList.ItemsSource = contactModel.FindAll();
         }
 
         public async void SaveNewContact(object sender, RoutedEventArgs e)
@@ -51,6 +62,7 @@ namespace T2009M_NGUYENHAIDANG_EXAM
                 dialog.CloseButtonText = "Close";
                 await dialog.ShowAsync();
             }
+            LoadingContactList();
         }
 
         public async void SearchContactByName(object sender, RoutedEventArgs e)
@@ -68,5 +80,7 @@ namespace T2009M_NGUYENHAIDANG_EXAM
                 await dialog.ShowAsync();
             }
         }
+
+
     }
 }
