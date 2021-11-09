@@ -39,7 +39,7 @@ namespace DatabaseHandler.Model
            
         }
 
-        public Contact FindByName(string name)
+        public  Contact FindByName(string name)
         {
             List<Contact> contactList = new List<Contact>();
             string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, DatabaseName);

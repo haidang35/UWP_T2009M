@@ -9,13 +9,27 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <StackPanel Orientation="Horizontal" Margin="50, 50">
+            <StackPanel Orientation="Vertical" Height="400" Width="300" Margin="100, 0"  HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Left"  Margin="0, 20" Text="Add Contact" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
+                <TextBlock HorizontalAlignment="Left"  Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="116"/>
+                <TextBox x:Name="nameTxt" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="297"/>
+                <TextBlock HorizontalAlignment="Left"  Text="Phone Number" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="116"/>
+                <TextBox x:Name="phoneTxt" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="297"/>
+                <Button Click="SaveNewContact" Content="Add Contact" Margin="0, 20" VerticalAlignment="Top" Width="297" Height="48"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Height="400" Width="300" Margin="100, 0"  HorizontalAlignment="Right">
+                <TextBlock HorizontalAlignment="Left"  Margin="0, 20" Text="Search Contact" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
+                <TextBlock HorizontalAlignment="Left"  Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="116"/>
+                <TextBox x:Name="nameSearchTxt" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="297"/>
+                <TextBlock HorizontalAlignment="Left"  Text="Phone Number" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="116"/>
+                <TextBox x:Name="phoneSearchTxt" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="297"/>
+                <Button Click="SearchContactByName" Content="Search Contact" Margin="0, 20" VerticalAlignment="Top" Width="297" Height="48"/>
+            </StackPanel>
+
+        </StackPanel>
+       
         
-        <TextBlock HorizontalAlignment="Left" Margin="386,195,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="116"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,227,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="297"/>
-        <TextBlock HorizontalAlignment="Left" Margin="386,290,0,0" Text="Phone Number" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="116"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,323,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="297"/>
-        <Button Content="Add Contact" Margin="386,392,0,0" VerticalAlignment="Top" Width="297" Height="48"/>
-        <TextBlock HorizontalAlignment="Left" Margin="386,155,0,0" Text="Add Contact" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
 
     </Grid>
 </Page>

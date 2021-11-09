@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DatabaseHandler.Entities;
+using DatabaseHandler.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +24,39 @@ namespace T2009M_NGUYENHAIDANG_EXAM
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ContactModel contactModel = new ContactModel();
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        public async void SaveNewContact(object sender, RoutedEventArgs e)
+        {
+            var newContact = new Contact
+            {
+                Name = nameTxt.Text,
+                Phone = phoneTxt.Text,
+            };
+            ContentDialog dialog = new ContentDialog();
+            if(contactModel.Save(newContact))
+            {
+                dialog.Title = "Notification";
+                dialog.Content = "Save new contact successful";
+                dialog.CloseButtonText = "Close";
+                await dialog.ShowAsync();
+            }else
+            {
+                dialog.Title = "Notification";
+                dialog.Content = "Save new contact failed";
+                dialog.CloseButtonText = "Close";
+                await dialog.ShowAsync();
+            }
+        }
+
+        public void SearchContactByName(object sender, RoutedEventArgs e)
+        {
+            var contact = contactModel.FindByName(nameSearchTxt.Text);
+            phoneSearchTxt.Text = contact.Phone;
         }
     }
 }
