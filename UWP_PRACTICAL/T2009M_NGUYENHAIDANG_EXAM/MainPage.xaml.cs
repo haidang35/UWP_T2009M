@@ -68,10 +68,22 @@ namespace T2009M_NGUYENHAIDANG_EXAM
         public async void SearchContactByName(object sender, RoutedEventArgs e)
         {
             var contact = contactModel.FindByName(nameSearchTxt.Text);
-            if (contact != null)
+            try
             {
-                phoneSearchTxt.Text = contact.Phone;
-            }else
+                if (contact != null)
+                {
+                    phoneSearchTxt.Text = contact.Phone;
+                }
+                else
+                {
+                    ContentDialog dialog = new ContentDialog();
+                    dialog.Title = "Notification";
+                    dialog.Content = "Contact not found";
+                    dialog.CloseButtonText = "Close";
+                    await dialog.ShowAsync();
+                }
+            }
+            catch(Exception ex)
             {
                 ContentDialog dialog = new ContentDialog();
                 dialog.Title = "Notification";
@@ -79,6 +91,7 @@ namespace T2009M_NGUYENHAIDANG_EXAM
                 dialog.CloseButtonText = "Close";
                 await dialog.ShowAsync();
             }
+          
         }
 
 

@@ -25,7 +25,7 @@ namespace DatabaseHandler.Model
                         db.Open();
                         SqliteCommand insertCommand = new SqliteCommand();
                         insertCommand.Connection = db;
-                        insertCommand.CommandText = "INSERT INTO contacts VALUES (@Name, @Phone);";
+                        insertCommand.CommandText = "INSERT INTO contacts (name, phone) VALUES (@Name, @Phone);";
                         insertCommand.Parameters.AddWithValue("@Name", contact.Name);
                         insertCommand.Parameters.AddWithValue("@Phone", contact.Phone);
                         insertCommand.ExecuteReader();
@@ -36,7 +36,6 @@ namespace DatabaseHandler.Model
             {
                 return false;
             }
-           
         }
 
         public  Contact FindByName(string name)
@@ -47,9 +46,8 @@ namespace DatabaseHandler.Model
                new SqliteConnection($"Filename={dbpath}"))
             {
                 db.Open();
-
                 SqliteCommand selectCommand = new SqliteCommand
-                    ($"SELECT * from contacts where name like %{name}% ", db);
+                    ($"SELECT * from contacts where name like '%{name}%' ", db);
 
                 SqliteDataReader query = selectCommand.ExecuteReader();
 
@@ -57,14 +55,17 @@ namespace DatabaseHandler.Model
                 {
                     var contact = new Contact()
                     {
-                        Name = query.GetString("name"),
-                        Phone = query.GetString("phone"),
+                        Name = query.GetString(1),
+                        Phone = query.GetString(2),
                     };
                     contactList.Add(contact);
                 }
-                db.Close();
+                if(contactList.Count > 0)
+                {
+                    return contactList[0];
+                }
             }
-            return contactList[0];
+            return null;
         }
 
         public List<Contact> FindAll()
@@ -85,8 +86,8 @@ namespace DatabaseHandler.Model
                 {
                     var contact = new Contact()
                     {
-                        Name = query.GetString("name"),
-                        Phone = query.GetString("phone"),
+                        Name = query.GetString(1),
+                        Phone = query.GetString(2),
                     };
                     contactList.Add(contact);
                 }

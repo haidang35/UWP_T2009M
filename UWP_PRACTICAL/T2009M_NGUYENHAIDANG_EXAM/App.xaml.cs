@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseHandler.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace T2009M_NGUYENHAIDANG_EXAM
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            SqliteConnector.InitializeDatabase();
         }
 
         /// <summary>

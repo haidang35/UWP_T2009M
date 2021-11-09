@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\UWP_PRACTICAL\DatabaseHandler\DatabaseHandler.csproj;x86
+C:\Users\nguye\source\repos\UWP_PRACTICAL\T2009M_NGUYENHAIDANG_EXAM\T2009M_NGUYENHAIDANG_EXAM.csproj;x86
