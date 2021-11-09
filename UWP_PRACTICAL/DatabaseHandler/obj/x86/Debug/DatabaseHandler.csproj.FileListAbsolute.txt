@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\UWP_PRACTICAL\DatabaseHandler\obj\x86\Debug\DatabaseHandler.csproj.AssemblyReference.cache
+C:\Users\nguye\source\repos\UWP_PRACTICAL\DatabaseHandler\obj\x86\Debug\DatabaseHandler.csproj.CoreCompileInputs.cache
